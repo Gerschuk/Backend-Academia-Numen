@@ -48,7 +48,6 @@ app.put("/objeto/:id", async (req, res) => {
             localObjects[i].name = name;
         }
     }
-    console.log(localObjects)
     fsPromises.writeFile("./clase2/db/database.txt", JSON.stringify(localObjects));
     res.json({message: `El objeto con id: ${id} se modificó con exito`})
     
